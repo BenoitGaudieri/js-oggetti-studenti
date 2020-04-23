@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects and chat</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+
+            <h1 class="gradient">Boolgram</h1>
+
+            <!-- To append to with template -->
+            <main class="chat"></main>
+
+            <div class="input-bar">
+                <input type="text" class="mess-input" placeholder="Type your message and press enter or use button">
+                <button class="mess-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script id="message-template" type="text/x-handlebars-template">
+        <div class="message {{userClass}}">
+            <div class="message-text">
+                {{text}}
+            </div>
+            <div class="message-time">
+                {{time}}
+            </div>
+        </div>
+
+    </script>
+
+
+    <!-- Jquery -->
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <!-- Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/chat/chat.js"></script>
+</body>
+
+</html>
