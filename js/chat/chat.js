@@ -34,7 +34,7 @@ $(document).ready(function () {
     function msgDisplay(message, status = "sent") {
         var data = {
             text: message,
-            time: "12:12",
+            time: timestampCalc(),
             userClass: status,
         };
 
@@ -268,6 +268,24 @@ $(document).ready(function () {
             ]),
         ]);
         return answer;
+    }
+
+    function addZero(num) {
+        if (num < 10) {
+            num = "0" + num;
+        }
+        return num;
+    }
+
+    /**
+     * Return styled timestamp
+     */
+    function timestampCalc() {
+        var date = new Date();
+        var hour = addZero(date.getHours());
+        var minutes = addZero(date.getMinutes());
+        var timestamp = hour + ":" + minutes;
+        return timestamp;
     }
 
     /**

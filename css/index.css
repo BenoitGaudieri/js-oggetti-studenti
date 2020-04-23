@@ -98,6 +98,10 @@ body {
     margin: 30px 100px;
 }
 
+.message-text {
+    padding: 0 20px 5px 0;
+}
+
 .message.sent {
     background: #ffa041;
     float: right;
