@@ -21,16 +21,16 @@ body {
     align-items: center;
 }
 
-h1 {
-    margin: 30px;
-}
-
 .gradient {
+    margin: 30px;
+    font-family: "Baloo Bhaina 2", cursive;
+    font-weight: 700;
     text-transform: uppercase;
-    background: linear-gradient(to left, #30cfd0 0%, #330867 100%);
+    background: linear-gradient(to left, #ff5656 0%, #30389e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 80px;
+    font-size: 85px;
+    letter-spacing: 12px;
 }
 
 .input-bar {
