@@ -5,10 +5,18 @@ $(document).ready(function () {
     //  refs
     var input = $(".mess-input");
     var button = $(".mess-btn");
+    // Messages
+    var initMess = [{ text: "Hello!" }, { text: "What's on your mind?" }];
 
     // Init handlebars
     var source = $("#message-template").html();
     var template = Handlebars.compile(source);
+
+    for (let m = 0; m < initMess.length; m++) {
+        for (const key in initMess[m]) {
+            msgDisplay(initMess[m][key], "received");
+        }
+    }
 
     input.keyup(function (e) {
         if (e.which == 13 || e.keyCode == 13) {
