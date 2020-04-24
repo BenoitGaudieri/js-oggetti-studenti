@@ -12,6 +12,7 @@ $(document).ready(function () {
     var source = $("#message-template").html();
     var template = Handlebars.compile(source);
 
+    // Initial messages
     for (let m = 0; m < initMess.length; m++) {
         for (const key in initMess[m]) {
             msgDisplay(initMess[m][key], "received");
